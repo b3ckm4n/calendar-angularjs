@@ -1,13 +1,11 @@
-<!-- Format a date so it displays in the format "Friday 1/16" -->
-<h2 class="date">  </h2>
+<h2 class="date">{{ day.date | date }}</h2>
 
-<!--
-TODO: Loop through events and display each one with this HTML
-
-<div class="event">
+<div class="event" ng-repeat="event in events">
   <a href="#/{{$index}}">
-    <h3 class="name">  </h3>
-    <p><span class="from">  </span> - <span class="to">  </span></p>
+    <h3 class="name">{{ day.event.name }}</h3>
+    <p><span class="from">{{ day.event.from }}</span> - <span class="to">{{ day.event.to }}</span></p>
   </a>
 </div>
--->
+
+<!-- I think the issue is how I'm trying to grab the objects. 
+I think I need to figure out bracket notation and how to get the right variable. How can I test that output? -->
