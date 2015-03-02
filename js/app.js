@@ -1,12 +1,16 @@
 var app = angular.module('CalendarApp', ['ngRoute']);
 
 app.config(function($routeProvider) {
-    $routeProvider.
-    when('/', {
+    $routeProvider
+    .when('/', {
         controller: 'DayController',
         templateUrl: 'views/day.html'
-    }).
-    otherwise({
+    })
+    .when('/:id', {
+        controller: 'EventController',
+        templateUrl: 'views/event.html'
+    })
+    .otherwise({
         redirectTo: '/'
     });
 });
